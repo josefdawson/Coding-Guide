@@ -19,7 +19,7 @@ document.getElementById('submit-email').addEventListener('click', () => {
     } else {
         document.getElementById('email-status').textContent = "Thank you, we'll keep mind of your email so we can remember you at our future websites";
         setTimeout(() => {
-            window.location.href = 'ue.html';
+            window.location.href = '../index.html';
         }, 2000);
     }
 });
@@ -39,7 +39,7 @@ document.getElementById('submit-password').addEventListener('click', () => {
 });
 
 document.getElementById('back-btn').addEventListener('click', () => {
-    window.location.href = 'ue.html';
+    window.location.href = '../index.html';
 });
 
 function setupAdminPanel() {

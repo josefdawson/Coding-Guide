@@ -7,7 +7,7 @@ function saveAccounts(accounts) {
 }
 
 document.getElementById('admin-btn').addEventListener('click', () => {
-    window.location.href = 'admin.html';
+    window.location.href = 'Sign%20Up%20and%20Sign%20in/admin.html';
 });
 
 document.getElementById('signup-btn').addEventListener('click', () => {
@@ -43,7 +43,7 @@ document.getElementById('signup-btn').addEventListener('click', () => {
 
     showAlert('Boom! Signed up successfully. Redirecting...', true);
     setTimeout(() => {
-        window.location.href = 'Dashboard/dashboard.html';
+        window.location.href = '../Dashboard/dashboard.html';
     }, 500);
 });
 

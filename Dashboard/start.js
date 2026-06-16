@@ -1,7 +1,7 @@
 const loggedInUser = localStorage.getItem('currentUser');
 
 if (!loggedInUser || localStorage.getItem('isLoggedIn') !== 'true') {
-  window.location.href = '../Sign Up and Sign in/ue.html';
+  window.location.href = '../index.html';
 } else {
   const userDisplay = document.getElementById('user-display');
   if (userDisplay) {
@@ -48,7 +48,7 @@ document.getElementById('deleteAcc').addEventListener('click', () => {
     localStorage.setItem('accounts', JSON.stringify(updated));
     localStorage.removeItem('currentUser');
     localStorage.removeItem('isLoggedIn');
-    window.location.href = '../Sign Up and Sign in/ue.html';
+    window.location.href = '../index.html';
   }
 });
 
