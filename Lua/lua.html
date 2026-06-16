@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="lstyle.css">
+    <title>Coding Guide: Lua</title>
+    <script src="https://cdn.jsdelivr.net/npm/fengari-web@0.1.4/dist/fengari-web.js"></script>
+</head>
+
+<body>
+    <h1 id="title">The first language we're learning is: Lua, it is very simple, but I recommend try scratch first, it
+        uses blocks instead of typing, heres the link.</h1>
+    <button id="scratch">Go to scratch</button>
+    <button id="next-btn" disabled>🔒 Locked</button>
+    <p id="p1" class="lesson-card"
+        data-code='-- This prints Hello World! to the output&#10;print("Hello World!") -- Press run which is the green button saying run and there should be text saying "Hello World!" in the big gray box called the output!'
+        data-real-text='Lua is a simple coding languages which is beginner friendly, used in Roblox, World of Warcraft, etc. with only a few keywords, lets start with your first code:'>
+        Lua is a simple coding languages which is beginner friendly, used in Roblox, World of Warcraft, etc. with only a
+        few keywords, let's start with your first code:
+    </p>
+    <p id="p2" class="lesson-card" data-code='-- Variables store values&#10;local x = 10&#10;print(x)'
+        data-real-text='Variables are a instance or object where you could store stuff:'>???</p>
+    <p id="p3" class="lesson-card"
+        data-code='-- Functions are reusable blocks of code&#10;function greet()&#10;  print("Hi!")&#10;end&#10;&#10;-- Call the function&#10;greet()'
+        data-real-text='Functions are reusable blocks of code that performs a specific task:'>???</p>
+    <p id="p4" class="lesson-card"
+        data-code='-- For Loop&#10;for i = 1, 10 do&#10;  print("Hi!")&#10;  -- Loops 10 times&#10;end&#10;&#10;-- While loop (commented out, will freeze browser if run)&#10;-- while true do&#10;--   print("This prints infinitely")&#10;-- end'
+        data-real-text='Loops are, there are 2 types, the for loop loops a specific number of times, the while loop loops infinitely:'>
+        ???</p>
+    <p id="p5" class="lesson-card"
+        data-code='-- os.execute does NOT work in the browser&#10;-- You can only use it in a real Lua environment&#10;&#10;-- os.execute("timeout /t 2 >nul") -- This would wait 2 seconds outside browser'
+        data-real-text='os.execute() waits for a specific amount of seconds, but this only works outside the browser:'>
+        ???</p>
+    <p id="p6" class="lesson-card"
+        data-code='-- If statement&#10;local letter = "A"&#10;local letter2 = "B"&#10;if letter then&#10;  print(letter)&#10;elseif letter2 == "C" then&#10;  print(letter2) -- Will NOT print because letter2 is "B" not "C"&#10;else&#10;  print(letter2) -- Now this will print IF letter is not a thing&#10;end&#10;local number = 5&#10;if number == 5 and letter2 == "B" then&#10;  print(number ..", ".. letter2) -- Prints 5, B&#10;end&#10;-- Bonus tip: functions, if statements, loops and more always end with "end"'
+        data-real-text='if statements execute if the specific rules are met, else and elseif run if rules are not met, and & or are used to combine conditions:'>
+        ???</p>
+    <p id="p7" class="lesson-card"
+        data-code='-- Sadly in Lua you can only comment for one line, so you have to do this:&#10;-- Hey&#10;-- Guys'
+        data-real-text='Comments are lines that dont execute, used to explain code, you can comment by putting -- then what you want to say:'>
+        ???</p>
+    <p id="p8" class="lesson-card"
+        data-code='local prototype = { attack = 10 }&#10;local monster = { hp = 100 }&#10;&#10;-- Set the metatable of "monster" and define __index&#10;setmetatable(monster, { __index = prototype })&#10;&#10;print(monster.hp)      -- Output: 100&#10;print(monster.attack)  -- Output: 10 (Found via the metatable!)'
+        data-real-text='Operators and Math, Lua uses ".." to combine a string and a variable in one object, math uses + for addition, * for multiplication, - for subtraction and / for division:'>
+        ???</p>
+    <p id="p9" class="lesson-card"
+        data-code='-- Tables are Luas main data structure&#10;local fruits = {"apple", "banana", "cherry"}&#10;print(fruits[1])     -- Output: apple (index starts at 1!)&#10;print(#fruits)       -- Output: 3 (# gets the length)&#10;&#10;-- Tables can also be dictionaries&#10;local person = {&#10;  name = "Josef",&#10;  age = 25&#10;}&#10;print(person.name)   -- Output: Josef'
+        data-real-text='Tables are Luas main data structure, used for arrays and dictionaries, note that Lua starts counting at 1 not 0:'>
+        ???</p>
+    <p id="p10" class="lesson-card"
+        data-code='-- String concatenation uses .. not +&#10;local name = "Lua"&#10;print("Hello, " .. name .. "!")  -- Output: Hello, Lua!&#10;&#10;-- Get the length of a string with #&#10;local text = "Coding"&#10;print(#text)  -- Output: 6&#10;&#10;-- tonumber() and tostring() convert types&#10;local num = tonumber("42")&#10;print(num + 1)  -- Output: 43'
+        data-real-text='Strings combine with .. not +, use # for length, and tonumber/tostring to convert:'>
+        ???</p>
+    <p id="p11" class="lesson-card"
+        data-code='-- Lua is dynamically typed&#10;local x = 10&#10;print(type(x))  -- Output: number&#10;x = "hello"&#10;print(type(x))  -- Output: string&#10;&#10;-- Common types: number, string, boolean, nil, table, function&#10;print(type(nil))    -- Output: nil&#10;print(type(true))   -- Output: boolean&#10;print(type({}))     -- Output: table'
+        data-real-text='Lua is dynamically typed so variables can hold any type, use type() to check what type something is:'>
+        ???</p>
+    <p id="p12" class="lesson-card"
+        data-code='-- nil means nothing / no value&#10;local x = nil&#10;print(x)       -- Output: nil&#10;print(type(x)) -- Output: nil&#10;&#10;-- Booleans: true and false&#10;local isCool = true&#10;if isCool then&#10;  print("You are cool!")&#10;end&#10;&#10;-- Only false and nil are falsy, everything else is truthy&#10;if 0 then print("0 is truthy in Lua!") end  -- This prints!'
+        data-real-text='nil means no value, booleans are true/false, in Lua only false and nil are falsy (even 0 and empty strings are truthy):'>
+        ???</p>
+    <p id="p13" class="lesson-card"
+        data-code='-- Multiple return values&#10;function getCoordinates()&#10;  return 10, 20, 30&#10;end&#10;&#10;local x, y, z = getCoordinates()&#10;print(x, y, z)  -- Output: 10 20 30&#10;&#10;-- You can ignore some with _&#10;local a, _, b = getCoordinates()&#10;print(a, b)     -- Output: 10 30'
+        data-real-text='Lua functions can return multiple values at once, just separate them with commas:'>
+        ???</p>
+    <p id="p14" class="lesson-card"
+        data-code='-- Variadic functions (any number of arguments)&#10;function sum(...)&#10;  local total = 0&#10;  for _, v in ipairs({...}) do&#10;    total = total + v&#10;  end&#10;  return total&#10;end&#10;&#10;print(sum(1, 2, 3))       -- Output: 6&#10;print(sum(10, 20, 30, 40)) -- Output: 100&#10;&#10;-- ... captures all extra arguments into a table'
+        data-real-text='Variadic functions use ... to accept any number of arguments, then treat them as a table:'>
+        ???</p>
+    <p id="p15" class="lesson-card"
+        data-code='-- ipairs() iterates over array indices (1..n)&#10;local fruits = {"apple", "banana", "cherry"}&#10;for i, v in ipairs(fruits) do&#10;  print(i, v)&#10;end&#10;-- Output:&#10;-- 1 apple&#10;-- 2 banana&#10;-- 3 cherry&#10;&#10;-- pairs() iterates over ALL keys&#10;local person = {name = "Joe", age = 25, city = "NYC"}&#10;for k, v in pairs(person) do&#10;  print(k, "=", v)&#10;end'
+        data-real-text='Use ipairs() for array-like tables (ordered) and pairs() for dictionaries (unordered):'>
+        ???</p>
+    <p id="p16" class="lesson-card"
+        data-code='-- Table library utilities&#10;local t = {3, 1, 4, 1, 5}&#10;table.sort(t)&#10;for _, v in ipairs(t) do print(v) end  -- Output: 1 1 3 4 5&#10;&#10;table.insert(t, 9)   -- Adds 9 to the end&#10;table.insert(t, 2, 7) -- Inserts 7 at index 2&#10;&#10;local last = table.remove(t)  -- Removes and returns last element&#10;print(last)  -- Output: 9&#10;&#10;print(#t)  -- Output: 6 (length changes after insert/remove)'
+        data-real-text='Use table.sort, table.insert and table.remove to manipulate lists easily:'>
+        ???</p>
+    <p id="p17" class="lesson-card"
+        data-code='-- String library&#10;local text = "Hello Lua"&#10;print(string.upper(text))  -- Output: HELLO LUA&#10;print(string.lower(text))  -- Output: hello lua&#10;print(string.len(text))    -- Output: 9 (same as #text)&#10;&#10;-- Substrings&#10;print(string.sub(text, 1, 5))  -- Output: Hello&#10;print(string.sub(text, -3))    -- Output: Lua&#10;&#10;-- Replace&#10;print(string.gsub("one one two", "one", "1"))  -- Output: 1 1 two&#10;&#10;-- The : syntax is shorthand&#10;print(text:upper())  -- Same as string.upper(text)'
+        data-real-text='The string library has lots of useful functions: upper, lower, sub, gsub, and the colon : is shorthand:'>
+        ???</p>
+    <p id="p18" class="lesson-card"
+        data-code='-- Math library&#10;print(math.pi)     -- Output: 3.1415926535898&#10;print(math.floor(3.7))  -- Output: 3&#10;print(math.ceil(3.1))   -- Output: 4&#10;print(math.abs(-5))     -- Output: 5&#10;print(math.max(2, 8, 5)) -- Output: 8&#10;print(math.min(2, 8, 5)) -- Output: 2&#10;&#10;-- Random numbers&#10;math.randomseed(os.time())  -- Seed for randomness&#10;print(math.random(1, 10))   -- Random number between 1 and 10'
+        data-real-text='The math library provides floor, ceil, abs, max, min, and random number generation:'>
+        ???</p>
+    <p id="p19" class="lesson-card"
+        data-code='-- Local vs global variables&#10;-- Without "local", variables are GLOBAL&#10;globalVar = "I am global"&#10;&#10;function test()&#10;  local x = 10  -- Local to this function&#10;  y = 20        -- Global! Even inside a function!&#10;end&#10;test()&#10;print(y)  -- Output: 20 (y exists globally)&#10;-- print(x)  -- Error! x is local to test()&#10;&#10;-- Always use local unless you need global!'
+        data-real-text='Without local, variables are global — always use local inside functions to avoid polluting the global scope:'>
+        ???</p>
+    <p id="p20" class="lesson-card"
+        data-code='-- Pcall for error handling (protected call)&#10;local success, result = pcall(function()&#10;  error("Something went wrong!")&#10;end)&#10;print(success)  -- Output: false&#10;print(result)   -- Output: Something went wrong!&#10;&#10;-- A safer divide function&#10;function safeDivide(a, b)&#10;  if b == 0 then error("Cannot divide by zero") end&#10;  return a / b&#10;end&#10;&#10;local ok, val = pcall(safeDivide, 10, 0)&#10;if not ok then print("Error:", val) end  -- Output: Error: Cannot divide by zero'
+        data-real-text='Use pcall() to safely run code that might error, it returns success boolean and the result or error message:'>
+        ???</p>
+    <p id="p21" class="lesson-card"
+        data-code='-- Lua coroutines (cooperative multitasking)&#10;local co = coroutine.create(function()&#10;  for i = 1, 3 do&#10;    print("Coroutine:", i)&#10;    coroutine.yield()  -- Pause and return control&#10;  end&#10;end)&#10;&#10;-- Resume the coroutine 3 times&#10;coroutine.resume(co)  -- Output: Coroutine: 1&#10;coroutine.resume(co)  -- Output: Coroutine: 2&#10;coroutine.resume(co)  -- Output: Coroutine: 3&#10;coroutine.resume(co)  -- Returns false, coroutine is done&#10;&#10;print(coroutine.status(co))  -- Output: dead'
+        data-real-text='Coroutines let you pause and resume functions, useful for games and cooperative multitasking:'>
+        ???</p>
+    <p id="p22" class="lesson-card"
+        data-code='-- The colon : syntax for OOP-style methods&#10;local player = {&#10;  name = "Hero",&#10;  hp = 100&#10;}&#10;&#10;function player:takeDamage(dmg)&#10;  -- self is automatically the player table&#10;  self.hp = self.hp - dmg&#10;  print(self.name .. " took " .. dmg .. " damage!")&#10;end&#10;&#10;player:takeDamage(25)  -- Output: Hero took 25 damage!&#10;print(player.hp)       -- Output: 75&#10;&#10;-- Without colon: player.takeDamage(player, 25)'
+        data-real-text='The colon : syntax passes self automatically, making OOP-style code cleaner:'>
+        ???</p>
+    <p id="p23" class="lesson-card"
+        data-code='-- Logical operators (and, or, not)&#10;-- "and" returns first falsy or last truthy&#10;print(nil and 5)    -- Output: nil&#10;print(3 and 5)      -- Output: 5&#10;&#10;-- "or" returns first truthy or last falsy&#10;local name = nil&#10;print(name or "Guest")  -- Output: Guest (default value pattern)&#10;&#10;-- "not" inverts boolean&#10;print(not true)    -- Output: false&#10;print(not nil)     -- Output: true&#10;print(not 0)       -- Output: false (0 is truthy)'
+        data-real-text='and / or / not are logical operators, Lua uses short-circuit evaluation: or is great for defaults:'>
+        ???</p>
+    <p id="p24" class="lesson-card"
+        data-code='-- Goto statement&#10;local i = 1&#10;::loopstart::  -- Label name between :: ::&#10;print(i)&#10;i = i + 1&#10;if i <= 5 then&#10;  goto loopstart  -- Jump back to label&#10;end&#10;-- Output: 1 2 3 4 5&#10;&#10;-- Goto can also skip sections&#10;if true then&#10;  goto skip&#10;end&#10;print("This will NOT print")&#10;::skip::&#10;print("Skipped!")'
+        data-real-text='Lua has goto with ::labels::, useful for jumping out of nested loops or creating simple loops:'>
+        ???</p>
+    <button id="view-code">View Code</button>
+    <button id="editor">Editor</button>
+    <div id="editor-view">
+        <textarea id="code" placeholder="print('Hello World!')" rows="30" cols="100"></textarea>
+        <button id="run">Run</button>
+        <div id="outputLog"></div>
+    </div>
+    <button id="save-progress">💾 Save Progress</button>
+    <script src="lua.js"></script>
+</body>
+
+</html>

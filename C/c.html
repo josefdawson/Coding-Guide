@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cstyle.css">
+    <title>Coding Guide: C</title>
+</head>
+<body>
+    <h1 id="title">The language we're learning is C</h1>
+    <p id="p1" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    printf("Hello World!\\n");&#10;    return 0;&#10;}'
+        data-real-text="C is a low-level compiled language, let's start with the classic first program:">
+        C is a low-level compiled language, let's start with the classic first program:
+    </p>
+    <p id="p2" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    int x = 10;&#10;    float pi = 3.14f;&#10;    char grade = &#39;A&#39;;&#10;    double big = 3.1415926535;&#10;    printf("%d %f %c %lf\\n", x, pi, grade, big);&#10;    return 0;&#10;}'
+        data-real-text="C has basic types: int, float, char, and double. Each uses a format specifier in printf:">
+        ???</p>
+    <p id="p3" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    int a, b;&#10;    printf("Enter two numbers: ");&#10;    scanf("%d %d", &amp;a, &amp;b);&#10;    printf("Sum: %d\\n", a + b);&#10;    printf("Product: %d\\n", a * b);&#10;    return 0;&#10;}'
+        data-real-text="printf outputs formatted text, scanf reads input using format specifiers and pointers with &:">
+        ???</p>
+    <p id="p4" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int add(int a, int b) {&#10;    return a + b;&#10;}&#10;void greet(char name[]) {&#10;    printf("Hello, %s!\\n", name);&#10;}&#10;int main() {&#10;    int result = add(5, 3);&#10;    printf("%d\\n", result);  // 8&#10;    greet("Alice");&#10;    return 0;&#10;}'
+        data-real-text="Functions need a return type, a name, parameters, and a body. void means no return value:">
+        ???</p>
+    <p id="p5" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    int score = 85;&#10;    if (score &gt;= 90) {&#10;        printf("A\\n");&#10;    } else if (score &gt;= 80) {&#10;        printf("B\\n");&#10;    } else {&#10;        printf("C\\n");&#10;    }&#10;&#10;    int age = 18;&#10;    char *status = (age &gt;= 18) ? "Adult" : "Minor";&#10;    printf("%s\\n", status);&#10;    return 0;&#10;}'
+        data-real-text="Conditionals use if/else if/else with curly braces, and the ternary operator ?: for inline conditions:">
+        ???</p>
+    <p id="p6" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    // For loop&#10;    for (int i = 0; i &lt; 5; i++) {&#10;        printf("%d ", i);&#10;    }&#10;    printf("\\n");&#10;&#10;    // While loop&#10;    int count = 0;&#10;    while (count &lt; 3) {&#10;        printf("%d ", count);&#10;        count++;&#10;    }&#10;    printf("\\n");&#10;&#10;    // Do-while loop&#10;    int n = 0;&#10;    do {&#10;        printf("%d ", n);&#10;        n++;&#10;    } while (n &lt; 3);&#10;    return 0;&#10;}'
+        data-real-text="C has for, while, and do-while loops. for is best for counting, while for conditions, do-while runs at least once:">
+        ???</p>
+    <p id="p7" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    int arr[5] = {1, 2, 3, 4, 5};&#10;    printf("%d\\n", arr[0]);  // 1&#10;&#10;    arr[2] = 99;&#10;    for (int i = 0; i &lt; 5; i++) {&#10;        printf("%d ", arr[i]);&#10;    }&#10;    printf("\\n");&#10;&#10;    int matrix[2][3] = {{1,2,3}, {4,5,6}};&#10;    printf("%d\\n", matrix[1][2]);  // 6&#10;    return 0;&#10;}'
+        data-real-text="Arrays are fixed-size collections of the same type, indexed from 0. You can have multi-dimensional arrays too:">
+        ???</p>
+    <p id="p8" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;int main() {&#10;    int x = 42;&#10;    int *ptr = &amp;x;  // Pointer stores the address of x&#10;&#10;    printf("Value: %d\\n", x);       // 42&#10;    printf("Address: %p\\n", &amp;x);    // e.g. 0x7fff...&#10;    printf("Dereference: %d\\n", *ptr); // 42&#10;&#10;    *ptr = 100;  // Change x through pointer&#10;    printf("New value: %d\\n", x);   // 100&#10;    return 0;&#10;}'
+        data-real-text="Pointers store memory addresses. Use &amp; to get an address, * to declare a pointer and dereference it:">
+        ???</p>
+    <p id="p9" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;#include &lt;string.h&gt;&#10;int main() {&#10;    char name[] = "Alice";&#10;    char copy[20];&#10;&#10;    printf("Length: %zu\\n", strlen(name));  // 5&#10;    strcpy(copy, name);&#10;    printf("Copy: %s\\n", copy);&#10;&#10;    char greeting[50];&#10;    strcpy(greeting, "Hello ");&#10;    strcat(greeting, name);&#10;    printf("%s\\n", greeting);  // Hello Alice&#10;&#10;    if (strcmp(name, "Alice") == 0) {&#10;        printf("Match!\\n");&#10;    }&#10;    return 0;&#10;}'
+        data-real-text="Strings are char arrays terminated by null. Use string.h for strlen, strcpy, strcat, strcmp:">
+        ???</p>
+    <p id="p10" class="lesson-card"
+        data-code='#include &lt;stdio.h&gt;&#10;#include &lt;string.h&gt;&#10;&#10;struct Student {&#10;    char name[50];&#10;    int age;&#10;    float gpa;&#10;};&#10;&#10;int main() {&#10;    struct Student s1;&#10;    strcpy(s1.name, "Alice");&#10;    s1.age = 20;&#10;    s1.gpa = 3.8;&#10;&#10;    printf("Name: %s\\n", s1.name);&#10;    printf("Age: %d\\n", s1.age);&#10;    printf("GPA: %.1f\\n", s1.gpa);&#10;&#10;    // Typedef shortcut&#10;    typedef struct {&#10;        int x, y;&#10;    } Point;&#10;    Point p = {10, 20};&#10;    printf("(%d, %d)\\n", p.x, p.y);&#10;    return 0;&#10;}'
+        data-real-text="Structures (struct) group related data together. typedef creates a shorthand alias for the type:">
+        ???</p>
+    <button id="view-code">View Code</button>
+    <button id="editor">Editor</button>
+    <div id="editor-view">
+        <textarea id="code" placeholder="#include <stdio.h>" rows="30" cols="100"></textarea>
+        <button id="run">Run (conceptual only)</button>
+        <div id="outputLog"></div>
+    </div>
+    <div id="note">Note: C cannot run in the browser. This editor shows code examples for learning purposes.</div>
+    <button id="prev-btn" onclick="location.href='../Java/java.html'">← Back: Java</button>
+    <button id="next-btn" disabled>🔒 Locked</button>
+    <button id="save-progress">💾 Save Progress</button>
+    <script src="c.js"></script>
+</body>
+</html>

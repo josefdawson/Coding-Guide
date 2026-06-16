@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jsstyle.css">
+    <title>Coding Guide: JavaScript</title>
+</head>
+<body>
+    <h1 id="title">The language we're learning is JavaScript</h1>
+    <p id="p1" class="lesson-card"
+        data-code='// console.log prints to the console&#10;console.log("Hello World!");'
+        data-real-text="JavaScript powers the web, let's start with the classic first program:">
+        JavaScript powers the web, let's start with the classic first program:
+    </p>
+    <p id="p2" class="lesson-card"
+        data-code='// let, const, and var declarations&#10;let x = 10;&#10;const name = "Alice";&#10;var price = 19.99;&#10;console.log(x, name, price);'
+        data-real-text="Variables in JS use let (mutable), const (immutable), and var (old way):">
+        ???</p>
+    <p id="p3" class="lesson-card"
+        data-code='// JavaScript data types&#10;let str = "hello";      // string&#10;let num = 42;           // number&#10;let bool = true;        // boolean&#10;let n = null;           // null&#10;let undef;              // undefined&#10;console.log(typeof str, typeof num, typeof bool, n, undef);'
+        data-real-text="JavaScript has dynamic typing with string, number, boolean, null, and undefined types:">
+        ???</p>
+    <p id="p4" class="lesson-card"
+        data-code='// Function declaration vs arrow function&#10;function greet(name) {&#10;    return "Hello " + name + "!";&#10;}&#10;const add = (a, b) => a + b;&#10;console.log(greet("Alice"));&#10;console.log(add(5, 3));'
+        data-real-text="Functions can be declared with the function keyword or as concise arrow functions:">
+        ???</p>
+    <p id="p5" class="lesson-card"
+        data-code='// Objects are key-value pairs&#10;let person = {&#10;    name: "Alice",&#10;    age: 25,&#10;    city: "NYC"&#10;};&#10;console.log(person.name);&#10;person.job = "Engineer";&#10;delete person.city;&#10;console.log(person);'
+        data-real-text="Objects store data as key-value pairs, you can add and delete properties dynamically:">
+        ???</p>
+    <p id="p6" class="lesson-card"
+        data-code='// Arrays are ordered collections&#10;let fruits = ["apple", "banana", "cherry"];&#10;fruits.push("date");&#10;let last = fruits.pop();&#10;console.log(fruits[0]);&#10;console.log(fruits.length);&#10;console.log(last);'
+        data-real-text="Arrays are ordered lists with push, pop, and length, indexing starts at 0:">
+        ???</p>
+    <p id="p7" class="lesson-card"
+        data-code='// if / else if / else&#10;let age = 18;&#10;if (age >= 21) {&#10;    console.log("Adult");&#10;} else if (age >= 13) {&#10;    console.log("Teenager");&#10;} else {&#10;    console.log("Child");&#10;}&#10;// Ternary operator&#10;let status = age >= 18 ? "Adult" : "Minor";&#10;console.log(status);&#10;// Switch statement&#10;let day = 3;&#10;switch (day) {&#10;    case 1: console.log("Mon"); break;&#10;    case 2: console.log("Tue"); break;&#10;    case 3: console.log("Wed"); break;&#10;    default: console.log("Other");&#10;}'
+        data-real-text="Conditionals use if/else if/else, ternary ?, and switch statements:">
+        ???</p>
+    <p id="p8" class="lesson-card"
+        data-code='// For loop&#10;for (let i = 0; i &lt; 5; i++) {&#10;    console.log(i);&#10;}&#10;// While loop&#10;let count = 0;&#10;while (count &lt; 3) {&#10;    console.log(count);&#10;    count++;&#10;}&#10;// For...of loop&#10;for (let fruit of ["a", "b", "c"]) {&#10;    console.log(fruit);&#10;}'
+        data-real-text="Loops include for (classic), while, and for...of for iterating over items:">
+        ???</p>
+    <p id="p9" class="lesson-card"
+        data-code='// Template literals with backticks&#10;let name = "Alice";&#10;let age = 25;&#10;console.log(`${name} is ${age} years old`);&#10;// String methods&#10;console.log("hello".toUpperCase());&#10;console.log("  spaced  ".trim());&#10;console.log("hello world".split(" ").join("-"));'
+        data-real-text="Template literals use backticks and ${}, plus strings have many built-in methods:">
+        ???</p>
+    <p id="p10" class="lesson-card"
+        data-code='// DOM manipulation&#10;let el = document.getElementById("title");&#10;el.textContent = "Hello from JavaScript!";&#10;el.addEventListener("click", () => {&#10;    console.log("Title clicked!");&#10;});'
+        data-real-text="The DOM lets you select elements, change text, and handle events with addEventListener:">
+        ???</p>
+    <button id="view-code">View Code</button>
+    <button id="editor">Editor</button>
+    <div id="editor-view">
+        <textarea id="code" placeholder="console.log('Hello World!')" rows="30" cols="100"></textarea>
+        <button id="run">Run</button>
+        <div id="outputLog"></div>
+    </div>
+    <button id="next-btn" disabled>🔒 Locked</button>
+    <button id="save-progress">💾 Save Progress</button>
+    <script src="js.js"></script>
+</body>
+</html>

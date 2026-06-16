@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="javastyle.css">
+    <title>Coding Guide: Java</title>
+</head>
+<body>
+    <h1 id="title">The language we're learning is Java</h1>
+    <p id="p1" class="lesson-card"
+        data-code='public class HelloWorld {&#10;    public static void main(String[] args) {&#10;        System.out.println(&quot;Hello World!&quot;);&#10;    }&#10;}'
+        data-real-text="Java is a compiled, statically typed language. Let's start with the classic Hello World class:">
+        Java is a compiled, statically typed language. Let's start with the classic Hello World class:
+    </p>
+    <p id="p2" class="lesson-card"
+        data-code='int age = 25;&#10;double price = 19.99;&#10;String name = &quot;Alice&quot;;&#10;boolean isReady = true;&#10;System.out.println(name + &quot; is &quot; + age);'
+        data-real-text='Java has explicit types: int for integers, double for decimals, String for text, and boolean for true/false:'>
+        ???</p>
+    <p id="p3" class="lesson-card"
+        data-code='public static int add(int a, int b) {&#10;    return a + b;&#10;}&#10;&#10;int sum = add(5, 3);&#10;System.out.println(sum); // 8'
+        data-real-text='Methods are declared with access modifiers, return types, parameters, and the static keyword:'>
+        ???</p>
+    <p id="p4" class="lesson-card"
+        data-code='int score = 85;&#10;if (score &gt;= 90) {&#10;    System.out.println(&quot;A&quot;);&#10;} else if (score &gt;= 80) {&#10;    System.out.println(&quot;B&quot;);&#10;} else {&#10;    System.out.println(&quot;C&quot;);&#10;}&#10;&#10;String day = &quot;Monday&quot;;&#10;switch (day) {&#10;    case &quot;Monday&quot;:&#10;        System.out.println(&quot;Start of week&quot;);&#10;        break;&#10;    default:&#10;        System.out.println(&quot;Other day&quot;);&#10;}'
+        data-real-text='Java uses if/else with curly braces and switch statements with case labels and break:'>
+        ???</p>
+    <p id="p5" class="lesson-card"
+        data-code='// For loop&#10;for (int i = 0; i &lt; 5; i++) {&#10;    System.out.println(i);&#10;}&#10;&#10;// While loop&#10;int count = 0;&#10;while (count &lt; 5) {&#10;    System.out.println(count);&#10;    count++;&#10;}&#10;&#10;// Enhanced for loop&#10;int[] nums = {1, 2, 3};&#10;for (int n : nums) {&#10;    System.out.println(n);&#10;}'
+        data-real-text='Java has for, while, and enhanced for loops for iterating over ranges and collections:'>
+        ???</p>
+    <p id="p6" class="lesson-card"
+        data-code='int[] numbers = {10, 20, 30, 40};&#10;System.out.println(numbers[0]); // 10&#10;System.out.println(numbers.length); // 4&#10;&#10;int[] squares = new int[5];&#10;for (int i = 0; i &lt; squares.length; i++) {&#10;    squares[i] = i * i;&#10;}'
+        data-real-text='Arrays are fixed-length containers accessed by index, created with {} or new keyword:'>
+        ???</p>
+    <p id="p7" class="lesson-card"
+        data-code='class Person {&#10;    String name;&#10;    int age;&#10;&#10;    Person(String name, int age) {&#10;        this.name = name;&#10;        this.age = age;&#10;    }&#10;&#10;    void greet() {&#10;        System.out.println(&quot;Hi, &quot; + name);&#10;    }&#10;}&#10;&#10;Person p = new Person(&quot;Alice&quot;, 25);&#10;p.greet();'
+        data-real-text='Classes are blueprints for objects, constructors initialize fields, and new creates instances:'>
+        ???</p>
+    <p id="p8" class="lesson-card"
+        data-code='class Animal {&#10;    String name;&#10;    Animal(String name) { this.name = name; }&#10;    void speak() { System.out.println(&quot;...&quot;); }&#10;}&#10;&#10;class Dog extends Animal {&#10;    Dog(String name) { super(name); }&#10;    void speak() { System.out.println(name + &quot; says Woof!&quot;); }&#10;}&#10;&#10;Dog d = new Dog(&quot;Rex&quot;);&#10;d.speak();'
+        data-real-text='Inheritance uses extends, super calls the parent constructor, and methods can be overridden:'>
+        ???</p>
+    <p id="p9" class="lesson-card"
+        data-code='import java.util.ArrayList;&#10;&#10;ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();&#10;fruits.add(&quot;Apple&quot;);&#10;fruits.add(&quot;Banana&quot;);&#10;fruits.add(&quot;Cherry&quot;);&#10;System.out.println(fruits.get(0)); // Apple&#10;System.out.println(fruits.size()); // 3&#10;fruits.remove(&quot;Banana&quot;);&#10;for (String f : fruits) {&#10;    System.out.println(f);&#10;}'
+        data-real-text='ArrayList is a resizable array from java.util, with add, get, remove, and size methods:'>
+        ???</p>
+    <p id="p10" class="lesson-card"
+        data-code='import java.util.Scanner;&#10;&#10;Scanner scanner = new Scanner(System.in);&#10;System.out.print(&quot;Enter your name: &quot;);&#10;String name = scanner.nextLine();&#10;System.out.println(&quot;Hello, &quot; + name + &quot;!&quot;);&#10;scanner.close();'
+        data-real-text='Scanner reads user input from System.in, nextLine() reads a whole line of text:'>
+        ???</p>
+    <button id="view-code">View Code</button>
+    <button id="editor">Editor</button>
+    <div id="editor-view">
+        <textarea id="code" placeholder="public class HelloWorld { ... }" rows="30" cols="100"></textarea>
+        <button id="run">Run</button>
+        <div id="outputLog"></div>
+    </div>
+    <div id="note">Note: Java cannot run in the browser. This editor shows code examples for learning purposes.</div>
+    <a id="prev-btn" href="../C++/cpp.html">← Back: C++</a>
+    <button id="next-btn" disabled>🔒 Locked</button>
+    <button id="save-progress">💾 Save Progress</button>
+    <script src="java.js"></script>
+</body>
+</html>

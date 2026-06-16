@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coding Guide: Admin Panel</title>
+  <link rel="stylesheet" href="adminstyle.css">
+</head>
+<body>
+  <div id="email-section" class="card">
+    <p>Enter your Gmail to be remembered on future websites:</p>
+    <input type="email" id="admin-email" placeholder="your.email@gmail.com">
+    <div id="password-section" style="display:none;">
+      <input type="password" id="admin-password" placeholder="Admin password">
+      <button id="submit-password">Submit Password</button>
+    </div>
+    <button id="submit-email">Submit</button>
+    <button id="back-btn">Go Back</button>
+    <p id="email-status"></p>
+  </div>
+
+  <div id="admin-panel" class="card" style="display:none;">
+    <h2>Admin Powers</h2>
+
+    <div id="ban-section">
+      <h3>Ban User</h3>
+      <select id="user-list"></select>
+      <button id="ban-btn">Ban Selected User</button>
+      <p id="ban-status"></p>
+    </div>
+
+    <div id="bypass-section">
+      <h3>Bypass — Go to Any Language</h3>
+      <button class="lang-btn" data-lang="Lua">Lua</button>
+      <button class="lang-btn" data-lang="Python">Python</button>
+      <button class="lang-btn" data-lang="JavaScript">JavaScript</button>
+      <button class="lang-btn" data-lang="C++">C++</button>
+      <button class="lang-btn" data-lang="Java">Java</button>
+      <button class="lang-btn" data-lang="C">C</button>
+    </div>
+
+    <div id="quiz-go-section">
+      <h3>Go to Quiz</h3>
+      <button id="go-quiz-btn">Go to Final Quiz</button>
+    </div>
+
+    <div id="quiz-bypass-section">
+      <h3>Quiz Bypass</h3>
+      <button id="bypass-quiz-btn">Mark Quiz as Completed (Perfect Score)</button>
+      <p id="quiz-bypass-status"></p>
+    </div>
+
+    <div id="user-data-section">
+      <h3>User Progress Data</h3>
+      <select id="data-user-select"></select>
+      <button id="view-data-btn">View Data</button>
+      <div id="user-data-display"></div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
