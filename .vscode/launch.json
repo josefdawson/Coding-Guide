@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/josef/Downloads/VS%20Code%20Folders/Coding%20Guide/Sign%20Up%20and%20Sign%20in/ue.html",
+            "url": "file:///C:/Users/josef/Downloads/VS%20Code%20Folders/Coding%20Guide/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]

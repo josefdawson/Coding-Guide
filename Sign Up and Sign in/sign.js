@@ -43,7 +43,7 @@ document.getElementById('signup-btn').addEventListener('click', () => {
 
     showAlert('Boom! Signed up successfully. Redirecting...', true);
     setTimeout(() => {
-        window.location.href = '../Dashboard/dashboard.html';
+        window.location.href = 'Dashboard/dashboard.html';
     }, 500);
 });
 
@@ -65,8 +65,8 @@ document.getElementById('login-btn').addEventListener('click', () => {
         localStorage.setItem('currentUser', loginUser);
         showAlert('Login successful! Redirecting...', true);
         setTimeout(() => {
-            window.location.href = '../Dashboard/dashboard.html';
-        }, 500);
+        window.location.href = 'Dashboard/dashboard.html';
+    }, 500);
     } else {
         showAlert('Invalid username or password!', false);
     }

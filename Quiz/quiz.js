@@ -169,6 +169,10 @@ function showResults() {
     });
 }
 
+document.getElementById('prev-btn').addEventListener('click', () => {
+    window.location.href = '../C/c.html';
+});
+
 nextBtn.addEventListener('click', () => {
     const user = localStorage.getItem('currentUser') || 'guest';
     const wrongCount = questions.length - score;
